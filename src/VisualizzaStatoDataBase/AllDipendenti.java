@@ -24,6 +24,7 @@ public class AllDipendenti extends JFrame {
 	 * Create the frame.
 	 */
 	public AllDipendenti(ArrayList<Dipendente> temp) {
+		setTitle("Dipendenti");
 		setType(Type.UTILITY);
 		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		setBounds(100, 100, 912, 542);

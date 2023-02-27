@@ -143,7 +143,7 @@ public class SetDipendente extends JFrame {
 		
 		Ruolo = new JComboBox(Ruoli);
 		Ruolo.setFont(new Font("Tahoma", Font.PLAIN, 25));
-		Ruolo.setBounds(120, 507, 183, 57);
+		Ruolo.setBounds(120, 507, 269, 57);
 		contentPane.add(Ruolo);
 		
 		JButton btnNewButton_3 = new JButton("");

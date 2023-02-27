@@ -24,6 +24,7 @@ public class AllAmmissione extends JFrame {
 	 * Create the frame.
 	 */
 	public AllAmmissione(ArrayList<Ammissione> temp) {
+		setTitle("Ammissioni");
 		setType(Type.UTILITY);
 		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		setBounds(100, 100, 912, 542);

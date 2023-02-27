@@ -24,6 +24,7 @@ public class AllVasche extends JFrame {
 	 * Create the frame.
 	 */
 	public AllVasche(ArrayList<Vasca> temp) {
+		setTitle("Vasche");
 		setType(Type.UTILITY);
 		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		setBounds(100, 100, 656, 432);

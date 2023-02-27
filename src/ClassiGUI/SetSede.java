@@ -73,7 +73,7 @@ public class SetSede extends JFrame {
 		TextContatti = new JTextField();
 		TextContatti.setFont(new Font("Tahoma", Font.PLAIN, 25));
 		TextContatti.setColumns(10);
-		TextContatti.setBounds(169, 450, 382, 40);
+		TextContatti.setBounds(147, 328, 382, 40);
 		contentPane.add(TextContatti);
 		
 		TextNomeCentro = new JTextField();
@@ -85,7 +85,7 @@ public class SetSede extends JFrame {
 		TextIDCentro = new JTextField();
 		TextIDCentro.setFont(new Font("Tahoma", Font.PLAIN, 25));
 		TextIDCentro.setColumns(10);
-		TextIDCentro.setBounds(150, 328, 580, 40);
+		TextIDCentro.setBounds(167, 451, 445, 40);
 		contentPane.add(TextIDCentro);
 		
 		JButton btnNewButton = new JButton("Invia");

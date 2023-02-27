@@ -125,10 +125,10 @@ public class Controller {
 	}
 	
 	
-	public void AppareSetCartellaClinica(String boh) {
+	public void AppareSetCartellaClinica(String IDDocumentazione) {
 		SetCartellaClinica SetCartellaClinica1 = new SetCartellaClinica();
 		SetCartellaClinica1.setVisible(true);
-		SetCartellaClinica.setDocumentazione(boh);
+		SetCartellaClinica.setDocumentazione(IDDocumentazione);
 	}
 	
 	
@@ -147,8 +147,8 @@ public class Controller {
 		SeeSediTartarughe1.setVisible(true);
 	}
 	
-	public void AppareAmmissioniCartelle(String foo) {
-		AmmissioniCartelle AmmissioniCartelle1 = new AmmissioniCartelle(foo);
+	public void AppareAmmissioniCartelle(String targhetta) {
+		AmmissioniCartelle AmmissioniCartelle1 = new AmmissioniCartelle(targhetta);
 		AmmissioniCartelle1.setVisible(true);
 	}
 	
@@ -162,8 +162,8 @@ public class Controller {
 		StatMensili1.setVisible(true);
 	}
 	
-	public void AppareStatAmmissioni(String foo) {
-		StatAmmissioni StatAmmissioni1 = new StatAmmissioni(foo);
+	public void AppareStatAmmissioni(String stat) {
+		StatAmmissioni StatAmmissioni1 = new StatAmmissioni(stat);
 		StatAmmissioni1.setVisible(true);
 	}
 	
@@ -176,8 +176,8 @@ public class Controller {
 	/**IL METODO ERRORE SPECIFICO PRENDE COME INPUT UNA STRINGA DA VISUALIZZARE COME ERRORE 
 	 * E MOSTRA AUTOMATICAMENTE UNA SCHERMATA CHE LO VISUALIZZA
 	 * @param String UN MESSAGGIO DI ERRORE*/
-	public void AppareErroreSpecifico(String foo) {
-		ErroreSpecifico ErroreSpecifico1 = new ErroreSpecifico(foo);
+	public void AppareErroreSpecifico(String errore) {
+		ErroreSpecifico ErroreSpecifico1 = new ErroreSpecifico(errore);
 		ErroreSpecifico1.setVisible(true);
 	}
 	
@@ -227,14 +227,14 @@ public class Controller {
 		VascaDAO1.assegnaVascaTartaruga(Vasca, Tartaruga);
 	}
 	
-	public void StatAmmissioniAnnueDAO(String foo) {
+	public void StatAmmissioniAnnueDAO(String anno) {
 		AmmissioneDAO AmmissioneDAO1 = AmmissioneDAO.GetIstanza();
-		AppareStatAmmissioni(AmmissioneDAO1.StatisticaAmmissioniAnnue(foo));
+		AppareStatAmmissioni(AmmissioneDAO1.StatisticaAmmissioniAnnue(anno));
 	}
 	
-	public void StatAmmissioniMensiliDAO(String foo, String boo) {
+	public void StatAmmissioniMensiliDAO(String mese, String anno) {
 		AmmissioneDAO AmmissioneDAO1 = AmmissioneDAO.GetIstanza();
-		AppareStatAmmissioni(AmmissioneDAO1.StatisticheAmmissioniMensili(foo, boo));
+		AppareStatAmmissioni(AmmissioneDAO1.StatisticheAmmissioniMensili(mese, anno));
 	}
 	
 	
@@ -263,29 +263,29 @@ public class Controller {
 		AmmissioneTartarugaDAO1.CancellaAmmissioneIndebita(foo);
 	}
 	
-	public void DocumentazioneIndebita(String foo) {
+	public void DocumentazioneIndebita(String IDDocumentazione) {
 		DocumentazioneDAO DocumentazioneDAO1 = DocumentazioneDAO.GetIstanza();
-		DocumentazioneDAO1.CancellaDocumentazioneIndebita(foo);
+		DocumentazioneDAO1.CancellaDocumentazioneIndebita(IDDocumentazione);
 	}
 	
-	public void CancellaAmmissioneTartaruga(String foo) {
+	public void CancellaAmmissioneTartaruga(String IDAmmissione) {
 		AmmissioneTartarugaDAO AmmissioneTartarugaDAO1 = AmmissioneTartarugaDAO.GetIstanza();
-		AmmissioneTartarugaDAO1.DeleteAmmissioneTartaruga(foo);
+		AmmissioneTartarugaDAO1.DeleteAmmissioneTartaruga(IDAmmissione);
 	}
 	
-	public void CancellaDocumentazioneCartellaClinica(String foo) {
+	public void CancellaDocumentazioneCartellaClinica(String IDDocumentazione) {
 		DocumentazioniCartelleClinicheDAO DocumentazioniCartelleClinicheDAO1 = DocumentazioniCartelleClinicheDAO.GetIstanza();
-		DocumentazioniCartelleClinicheDAO1.DeleteDocumentazioneCartellaClinica(foo);
+		DocumentazioniCartelleClinicheDAO1.DeleteDocumentazioneCartellaClinica(IDDocumentazione);
 	}
 	
-	public void CancellaDipendente(String foo) {
+	public void CancellaDipendente(String matricola) {
 		DipendenteDAO DipendenteDAO1 = DipendenteDAO.GetIstanza();
-		DipendenteDAO1.DeleteDipendente(foo);
+		DipendenteDAO1.DeleteDipendente(matricola);
 	}
 	
-	public void CancellaSede(String foo) {
+	public void CancellaSede(String IDSede) {
 		SedeDAO SedeDAO1 = SedeDAO.GetIstanza();
-		SedeDAO1.DeleteSede(foo);
+		SedeDAO1.DeleteSede(IDSede);
 	}
 	
 	
@@ -293,9 +293,9 @@ public class Controller {
 	
 	
 	//TROVA IL NOME DELLA TARTARUGA	
-	public String TrovaNomeTartaruga(String foo) {
+	public String TrovaNomeTartaruga(String targhetta) {
 		TartarugaDAO TartarugaDAO1 = TartarugaDAO.GetIstanza();
-		return TartarugaDAO1.CercaNomeTartaruga(foo);
+		return TartarugaDAO1.CercaNomeTartaruga(targhetta);
 	}
 	
 	
@@ -345,21 +345,21 @@ public class Controller {
 		boh.setVisible(true);
 	}
 	
-	public void AmmissioniTarghetta(String foo) {
+	public void AmmissioniTarghetta(String targhetta) {
 		AmmissioneDAO AmmissioneDAO1 = AmmissioneDAO.GetIstanza();
-		AllAmmissione boh = new AllAmmissione(AmmissioneDAO1.AmmissionePerTarghetta(foo));
+		AllAmmissione boh = new AllAmmissione(AmmissioneDAO1.AmmissionePerTarghetta(targhetta));
 		boh.setVisible(true);
 	}
 	
-	public void CartelleDiAmmissione(String foo) {
+	public void CartelleDiAmmissione(String IDammissione) {
 		CartellaClinicaDAO CartellaClinicaDAO1 = CartellaClinicaDAO.GetIstanza();
-		AllCartelleCliniche boh = new AllCartelleCliniche(CartellaClinicaDAO1.CartelleDiAmmissione(foo));
+		AllCartelleCliniche boh = new AllCartelleCliniche(CartellaClinicaDAO1.CartelleDiAmmissione(IDammissione));
 		boh.setVisible(true);
 	}
 	
-	public void CartelleDiUnAnno(String foo) {
+	public void CartelleDiUnAnno(String Anno) {
 		CartellaClinicaDAO CartellaClinicaDAO1 = CartellaClinicaDAO.GetIstanza();
-		AllCartelleCliniche boh = new AllCartelleCliniche(CartellaClinicaDAO1.StatAnnuali(foo));
+		AllCartelleCliniche boh = new AllCartelleCliniche(CartellaClinicaDAO1.StatAnnuali(Anno));
 		boh.setVisible(true);
 	}
 	

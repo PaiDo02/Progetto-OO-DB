@@ -145,36 +145,37 @@ public class SetCartellaClinica extends JFrame {
 		
 		Occhi = new JComboBox(Stati);
 		Occhi.setFont(new Font("Tahoma", Font.PLAIN, 25));
-		Occhi.setBounds(653, 195, 194, 48);
+		Occhi.setBounds(653, 195, 291, 48);
 		contentPane.add(Occhi);
 		
 		Testa = new JComboBox(Stati);
 		Testa.setFont(new Font("Tahoma", Font.PLAIN, 25));
-		Testa.setBounds(653, 115, 194, 49);
+		Testa.setBounds(653, 115, 291, 49);
 		contentPane.add(Testa);
 		
 		Naso = new JComboBox(Stati);
 		Naso.setFont(new Font("Tahoma", Font.PLAIN, 25));
-		Naso.setBounds(653, 280, 194, 47);
+		Naso.setBounds(653, 280, 291, 47);
 		contentPane.add(Naso);
 		
 		Becco = new JComboBox(Stati);
 		Becco.setFont(new Font("Tahoma", Font.PLAIN, 25));
-		Becco.setBounds(653, 429, 194, 46);
+		Becco.setBounds(653, 429, 291, 46);
 		contentPane.add(Becco);
 		
 		Collo = new JComboBox(Stati);
 		Collo.setFont(new Font("Tahoma", Font.PLAIN, 25));
-		Collo.setBounds(653, 354, 194, 48);
+		Collo.setBounds(653, 354, 291, 48);
 		contentPane.add(Collo);
 		
 		Pinne = new JComboBox(Stati);
 		Pinne.setFont(new Font("Tahoma", Font.PLAIN, 25));
-		Pinne.setBounds(653, 505, 194, 48);
+		Pinne.setBounds(653, 505, 291, 48);
 		contentPane.add(Pinne);
 		
 		Coda = new JComboBox(Stati);
-		Coda.setBounds(653, 583, 194, 48);
+		Coda.setFont(new Font("Tahoma", Font.PLAIN, 25));
+		Coda.setBounds(653, 583, 291, 48);
 		contentPane.add(Coda);
 		
 		btnNewButton_1 = new JButton("");

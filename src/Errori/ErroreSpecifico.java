@@ -21,6 +21,7 @@ public class ErroreSpecifico extends JFrame {
 	private JPanel contentPane;
 	private JTextField MessaggioDiErrore;
 	private JLabel lblNewLabel;
+	private JLabel lblNewLabel_1;
 	
 
 	/**
@@ -34,6 +35,7 @@ public class ErroreSpecifico extends JFrame {
 		setBounds(100, 100, 900, 500);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setUndecorated(true);
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
@@ -46,21 +48,28 @@ public class ErroreSpecifico extends JFrame {
 			}
 		});
 		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 30));
-		btnNewButton.setBounds(441, 344, 149, 71);
+		btnNewButton.setBounds(680, 419, 149, 71);
 		contentPane.add(btnNewButton);
 		
 		MessaggioDiErrore = new JTextField();
 		MessaggioDiErrore.setBackground(Color.WHITE);
 		MessaggioDiErrore.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		MessaggioDiErrore.setEditable(false);
-		MessaggioDiErrore.setBounds(10, 45, 638, 89);
+		MessaggioDiErrore.setBounds(29, 46, 614, 89);
 		contentPane.add(MessaggioDiErrore);
 		MessaggioDiErrore.setColumns(10);
 		MessaggioDiErrore.setText(Errore);
 		
+		lblNewLabel_1 = new JLabel("Per continuare premere OK.");
+		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 25));
+		lblNewLabel_1.setBounds(40, 426, 369, 61);
+		contentPane.add(lblNewLabel_1);
+		
 		lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon(ErroreSpecifico.class.getResource("/Textures/Errore Specifico.png")));
+		lblNewLabel.setIcon(new ImageIcon(ErroreSpecifico.class.getResource("/Textures/Errore.png")));
 		lblNewLabel.setBounds(0, 0, 900, 500);
 		contentPane.add(lblNewLabel);
+		
+
 	}
 }

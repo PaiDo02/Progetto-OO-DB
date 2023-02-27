@@ -20,6 +20,7 @@ public class AllCartelleCliniche extends JFrame {
 
 
 	public AllCartelleCliniche(ArrayList<CartellaClinica> temp) {
+		setTitle("Cartelle Cliniche");
 		setType(Type.UTILITY);
 		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		setBounds(0, 100, 1520, 542);

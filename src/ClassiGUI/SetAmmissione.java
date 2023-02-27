@@ -203,6 +203,13 @@ public class SetAmmissione extends JFrame {
 		contentPane.add(lblNewLabel_7);
 		
 		btnNewButton_2 = new JButton("");
+		btnNewButton_2.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				controller.AppareAddNew();
+				setVisible(false);
+			}
+		});
 		btnNewButton_2.setIcon(new ImageIcon(SetAmmissione.class.getResource("/Textures/Go-back-icon.png")));
 		btnNewButton_2.setBounds(1409, 730, 80, 80);
 		contentPane.add(btnNewButton_2);

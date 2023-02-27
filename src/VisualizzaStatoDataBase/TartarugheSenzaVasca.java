@@ -23,6 +23,7 @@ public class TartarugheSenzaVasca extends JFrame {
 	 * Create the frame.
 	 */
 	public TartarugheSenzaVasca(ArrayList<Tartaruga> temp) {
+		setTitle("Tartarughe senza vasca");
 		setType(Type.UTILITY);
 		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		setBounds(100, 100, 655, 375);

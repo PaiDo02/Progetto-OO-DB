@@ -63,6 +63,7 @@ public class NewVasca extends JFrame {
 		contentPane.add(Tipo);
 		
 		Lunghezza = new JTextField();
+		Lunghezza.setFont(new Font("Tahoma", Font.PLAIN, 25));
 		Lunghezza.setBounds(172, 204, 132, 58);
 		contentPane.add(Lunghezza);
 		Lunghezza.setColumns(10);
