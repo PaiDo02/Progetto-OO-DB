@@ -62,7 +62,7 @@ public class Controller {
 	}
 	
 	
-	//CREZIONE METODI PER FAR APPARIRE I VARI PEZZI DI GUI
+	//CREAZIONE METODI PER FAR APPARIRE I VARI PEZZI DI GUI
 	public void AppareMainGUI(){
 		MainGUI MainGUI1 = new MainGUI();
 		MainGUI1.setVisible(true); 
@@ -339,9 +339,9 @@ public class Controller {
 		boh.setVisible(true);
 	}
 	
-	public void ViewTartarugheCentro(String foo) {
+	public void ViewTartarugheCentro(String IDCentro) {
 		TartarugaDAO TartarugaDAO1 = TartarugaDAO.GetIstanza();
-		AllTartarughe boh = new AllTartarughe(TartarugaDAO1.TartarugheDiUnCentro(foo));
+		AllTartarughe boh = new AllTartarughe(TartarugaDAO1.TartarugheDiUnCentro(IDCentro));
 		boh.setVisible(true);
 	}
 	

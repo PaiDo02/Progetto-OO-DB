@@ -116,8 +116,8 @@ public class SetDocumentazione extends JFrame {
 				   Etichetta.getText().equals("") || IDDocumentazione.getText().equals("") || Luogo.getText().equals("") || 
 				   Veterinario.getText().equals("")) {
 						
-					setVisible(false);
 					controller.AppareMainGUI();
+					setVisible(false);
 					controller.AppareErroreGenerico();
 					
 					
@@ -136,8 +136,8 @@ public class SetDocumentazione extends JFrame {
 					temp.setLuogoDiRitrovamento(Luogo.getText());
 					temp.setVeterinario(Veterinario.getText());
 					
-					setVisible(false);
 					controller.PassaPerIlDocumentazioneDAO(temp);
+					setVisible(false);
 					
 				}
 				

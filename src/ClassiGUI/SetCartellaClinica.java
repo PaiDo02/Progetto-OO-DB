@@ -130,8 +130,9 @@ public class SetCartellaClinica extends JFrame {
 					temp.setTesta((String) Testa.getItemAt(Testa.getSelectedIndex()));
 					temp.setDocumentazione(Documentazione);
 					
-					setVisible(false);
+					
 					controller.AppareMainGUI();
+					setVisible(false);
 					
 					controller.PassaPerIlCartellaClinicaDAO(temp);
 					

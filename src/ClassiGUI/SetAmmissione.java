@@ -89,8 +89,9 @@ public class SetAmmissione extends JFrame {
 				if (Centro.getText().equals("") || IDAmmissione.getText().equals("") || Anno.getText().equals("") || 
 					Mese.getText().equals("") || Giorno.getText().equals("")) {
 					
-					setVisible(false);
+					
 					controller.AppareMainGUI();
+					setVisible(false);
 					controller.AppareErroreGenerico();
 					
 					
@@ -111,16 +112,20 @@ public class SetAmmissione extends JFrame {
 					if (Riammissione.isSelected()) {
 						temp.setRiammissione("TRUE");
 						controller.ControllerPassaTartarugaTrue(temp);
-						setVisible(false);
+						
 						controller.AppareSetTartarugaTrue();
+						setVisible(false);
+						
 						controller.PassaPerIlAmmissioneDAO(temp);
 						
 					}
 					else {
 						temp.setRiammissione("FALSE");
 						controller.ControllerPassaTartarugaFalse(temp);
-						setVisible(false);
+						
 						controller.AppareSetTartarugaFalse();
+						setVisible(false);
+						
 						controller.PassaPerIlAmmissioneDAO(temp);
 						
 					}

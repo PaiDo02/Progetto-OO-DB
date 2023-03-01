@@ -70,8 +70,8 @@ public class SetDipendente extends JFrame {
 				if (Matricola.getText().equals("") || Nome.getText().equals("") || Cognome.getText().equals("") 
 				|| Ruolo.getItemAt(Ruolo.getSelectedIndex()).equals("") || Centro.getText().equals("")) {
 					
-					setVisible(false);
 					controller.AppareMainGUI();
+					setVisible(false);
 					controller.AppareErroreGenerico();
 					
 					
@@ -82,10 +82,10 @@ public class SetDipendente extends JFrame {
 					temp.setMatricola(Matricola.getText());
 					temp.setNome(Nome.getText());
 					temp.setRuolo((String) Ruolo.getItemAt(Ruolo.getSelectedIndex()));
-				
-					setVisible(false);
+	
 					
 					controller.AppareMainGUI();
+					setVisible(false);
 				
 					controller.PassaPerIlDipendenteDAO(temp);
 				
